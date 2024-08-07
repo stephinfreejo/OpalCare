@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpalWellness</title>
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="chatbot.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMW5vW1foP7Uq+TL0DoPI8P+ylf9fC0P1zQ==" crossorigin="anonymous">
+    <style>
+        .hero-section {
+            position: relative;
+            background: url('Healthcare-Hero.jpg.webp') no-repeat center center/cover;
+            height: 600px;
+            color: white;
+            text-shadow: 2px 2px 8px #000000;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            /* Semi-transparent overlay */
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+
+            z-index: 2;
+            font-size: 2em;
+            /* Increase font size */
+        }
+
+        .section-title {
+            margin-bottom: 40px;
+            font-weight: bolder;
+        }
+
+        .scroll-container {
+            overflow-x: auto;
+            white-space: nowrap;
+            padding: 20px 0;
+        }
+
+        .article {
+            display: inline-block;
+            width: 40%;
+            /* Adjusted to auto to fit content */
+            margin-right: 20px;
+            background-color: whitesmoke;
+            padding: 20px;
+            border-radius: 5px;
+            vertical-align: top;
+            overflow: hidden;
+            text-align: left;
+            box-sizing: border-box;
+            
+            /* Align text to the left */
+        }
+
+        .article h5 {
+            font-size: 1.5rem;
+            /* Increased font size */
+            margin-bottom: 10px;
+            
+        }
+
+        .article p {
+            font-size: 1.125rem;
+            /* Increased font size for better readability */
+            margin-bottom: 10px;
+
+            
+        }
+
+        .article a {
+            display: inline-flex;
+            background-color: #6d7277;
+            /* Button color */
+            color: white;
+            /* Text color */
+            padding: 12px 24px;
+            /* Increased padding for a larger button */
+            border-radius: 5px;
+            text-align: center;
+            text-decoration: none;
+            /* Removes underline */
+            font-size: 1.125rem;
+            /* Match button font size with text */
+        }
+
+        .article a:hover {
+            background-color: #0056b3;
+            /* Darker shade on hover */
+        }
+
+        .article a:active {
+            background-color: #004085;
+            /* Even darker shade when clicked */
+        }
+
+        /* Adjust the last article's margin-right to 0 */
+        .scroll-container .article:last-child {
+            margin-right: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="bot-icon">
+        <img src="chatbot.jpg" alt="bot Icon">
+    </div>
+    <div id="chat-container" class="minimized">
+        <div class="chat-container">
+            <div class="chat-header">Chatbot</div>
+            <div class="chat-subheader">Ask me anything?</div>
+            <div class="chat-body" id="chat-body">
+                <!-- Predefined questions section -->
+                <div class="predefined-questions">
+                    <ul id="question-list">
+                        <li
+                            data-answer="A balanced diet includes a variety of foods in the right proportions to provide the necessary nutrients for good health. It typically includes fruits, vegetables, lean proteins, whole grains, and healthy fats.">
+                            What is a balanced diet?</li>
+                        <li
+                            data-answer="It is generally recommended to drink about 8 cups (2 liters) of water a day. However, this can vary based on individual needs, activity levels, and climate.">
+                            How much water should I drink daily?</li>
+                        <li
+                            data-answer="Healthy snacks include fruits, vegetables with hummus, nuts, yogurt, and whole-grain crackers.">
+                            What are some healthy snacks?</li>
+                        <li
+                            data-answer="The best way to lose weight is through a combination of a healthy, balanced diet and regular physical activity. It's also important to consult with a healthcare provider before starting any weight loss plan.">
+                            What is the best way to lose weight?</li>
+                    </ul>
+                </div>
+                <!-- Dynamic conversation section -->
+                <div id="answer"></div>
+            </div>
+            <div class="chat-footer">
+                <input type="text" id="user-question" placeholder="Type your question...">
+                <button id="send-btn">Send</button>
+                <i class="fas fa-sync-alt" id="refresh-btn"></i> <!-- Refresh icon -->
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><b>OpalWellness</b></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                    <!-- Dynamic content will be added here by JavaScript -->
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+
+
+    <!-- Include contents of webpage -->
+
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="hero-content">
+            <h1 class="display-4" style="font-weight:bolder; text-shadow:#000000;">Good Health and Well-Being Initiative
+            </h1>
+            <p class="lead">Promoting healthy lifestyles, improving healthcare access, and enhancing community
+                well-being.</p>
+            <p style="font-weight: normal;font-size:medium;">Join us in our mission to create healthier communities
+                through education, support, and equitable access
+                to healthcare services.</p>
+            <a href="about.html" class="btn btn-primary btn-lg">Learn More</a>
+            <a href="contact.html" class="btn btn-secondary btn-lg">Get Involved</a>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-md-4">
+                <h3>Health Education</h3>
+                <p>Providing comprehensive health education to promote awareness about various health issues and
+                    encourage healthy habits.</p>
+            </div>
+            <div class="col-md-4">
+                <h3>Fitness Programs</h3>
+                <p>Offering a range of fitness programs designed to improve physical health and well-being for all age
+                    groups.</p>
+            </div>
+            <div class="col-md-4">
+                <h3>Mental Health Support</h3>
+                <p>Connecting individuals with mental health resources and support to ensure holistic well-being.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <h3>Diet Plans</h3>
+                <p>Offering a range of Diet plans designed to improve physical health and well-being for all age
+                    groups</p>
+            </div>
+            <div class="col-md-4">
+                <h3>Community Engagement</h3>
+                <p>Engaging with communities to understand their needs and provide tailored health solutions.</p>
+            </div>
+            <div class="col-md-4">
+                <h3>Policy Advocacy</h3>
+                <p>Advocating for policies that promote equitable access to healthcare and address socio-economic health
+                    barriers.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Stories Section -->
+    <div class="bg-light py-5">
+        <div class="container">
+            <h2 class="section-title text-center">Stories</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="succes_stories/image.png"
+                            class="card-img-top transition delay-150 duration-300 ease-in-out ... "
+                            alt="Success Story 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Kerala's Response to the COVID-19 Pandemic </h5>
+                            <p class="card-text">In the early days of the COVID-19 pandemic, Kerala emerged as a leader
+                                in managing the crisis with remarkable efficiency and foresight.</p>
+                            <a href="case1.html" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="succes_stories/image copy.png" class="card-img-top" alt="Success Story 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Aster Medcity: A Leading Healthcare Institution </h5>
+                            <p class="card-text">Aster Medcity, situated in Kochi, renowned for its state-of-the-art
+                                facilities and adherence to international standards</p>
+                            <a href="case2.html" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="succes_stories/image copy 2.png" class="card-img-top" alt="Success Story 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Cleveland Clinic's Heart Program </h5>
+                            <p class="card-text">The Cleveland Clinic's heart program has distinguished itself as a
+                                leader in cardiovascular care, holding the top spot in U.S. News & World Report's
+                                rankings for over two decades. </p>
+                            <a href="case3.html" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Latest News Section -->
+    <!-- Articles Section -->
+    <div class="container py-5" >
+        <h2 class="section-title text-center">Articles</h2>
+        <div class="scroll-container">
+            <div class="article">
+                <h5>Understanding Mental Health</h5>
+                <p>Mental health encompasses emotional, psychological, and social well-being. It affects how we think,
+                    feel, and act...</p>
+                <a href="Mental_health.html" class="btn btn-primary">Read More</a>
+            </div>
+            <div class="article">
+                <h5>Healthy Lifestyle</h5>
+                <p>Find advice on achieving a balanced and healthy lifestyle through proper nutrition, regular physical activity, adequate sleep, and stress management. </p>
+                <a href="Healthy_lifestyle.html" class="btn btn-primary">Read More</a>
+            </div>
+            <div class="article">
+                <h5>Exercise and Its Impact on Health</h5>
+                <p>Regular physical activity can improve your muscle strength and boost your endurance. Exercise
+                    delivers oxygen and nutrients to your tissues and helps your cardiovascular system work more
+                    efficiently...</p>
+                <a href="Fitness_and_exercise.html" class="btn btn-primary">Read More</a>
+            </div>
+            <div class="article">
+                <h5>Women's Health</h5>
+                <p>Get insights into the latest research and recommendations for women's health, including reproductive health and disease preventions. Understand the unique health challenges women face and how to address them effectively.</p>
+                <a href="Womens_health.html" class="btn btn-primary">Read More</a>
+            </div>
+            <div class="article">
+                <h5>Healthcare Technology</h5>
+                <p>Stay informed about the latest innovations in healthcare technology, such as telemedicine, health apps, and wearable devices. Understand how these advancements transform patient care and make healthcare more accessible.</p>
+                <a href="Healthcare_technology.html" class="btn btn-primary">Read More</a>
+            </div>
+            <div class="article">
+                <h5>Environmental Health</h5>
+                <p>Understand the impact of environmental factors on health, including pollution, climate change, and exposure to toxins. Learn about strategies for reducing environmental health risks and promoting a healthier, more sustainable environment.</p>
+                <a href="Environmental_health.html" class="btn btn-primary">Read More</a>
+            </div>
+        </div>
+    </div>
+    <!-- Contact Us Section -->
+    <div class="bg-light py-5">
+        <div class="container">
+            <h2 class="section-title text-center">Contact Us</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" rows="3" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+                <div class="col-md-6">
+                    <h4>Contact Information</h4>
+                    <p><strong>Address:</strong> 123 Health St, Wellness City, USA</p>
+                    <p><strong>Phone:</strong> +1 234 567 890</p>
+                    <p><strong>Email:</strong> info@goodhealthinitiative.org</p>
+                </div>
+
+                <!-- Footer -->
+                <footer class="bg-light py-4">
+                    <div class="container text-center">
+                        <p class="mb-0">&copy; 2024 Good Health and Well-Being Initiative. All Rights Reserved.</p>
+                    </div>
+                </footer>
+
+
+
+
+
+
+
+                <script src="chatbot.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+                    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+                    crossorigin="anonymous"></script>
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+                    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+                    crossorigin="anonymous"></script>
+                <script>
+                    document.addEventListener('DOMContentLoaded', function () {
+                        const navItems = [
+                            { name: 'Home', href: 'index.html' },
+                            { name: 'Plans for you', href: 'plans.html' },
+                            { name: 'More', href: 'areawise.html' },
+                            { name: 'About us', href: 'about.html' },
+
+                        ];
+
+                        const navbarNav = document.querySelector('.navbar-nav');
+                        navItems.forEach(item => {
+                            const li = document.createElement('li');
+                            li.className = 'nav-item';
+                            if (item.name === 'More') {
+                                // Create a dropdown menu
+                                li.className = 'nav-item dropdown';
+                                const a = document.createElement('a');
+                                a.className = 'nav-link dropdown-toggle';
+                                a.href = '#';
+                                a.role = 'button';
+                                a.dataset.bsToggle = 'dropdown';
+                                a.ariaExpanded = 'false';
+                                a.textContent = item.name;
+                                const ul = document.createElement('ul');
+                                ul.className = 'dropdown-menu';
+                                const dropdownItems = [
+                                    { name: 'Hospitals', href: 'areawise.html' },
+                                    { name: 'Latest Studies and News', href: 'home.html' },
+                                    { name: 'Lifestyle Diseases', href: 'life.html' },
+                                    { name: 'Vaccinations info', href: 'vacc.html' },
+                                    { name: 'Contact us', href: 'contact.html' }
+
+
+                                ];
+                                dropdownItems.forEach(dropdownItem => {
+                                    const dropdownLi = document.createElement('li');
+                                    const dropdownA = document.createElement('a');
+                                    dropdownA.className = 'dropdown-item';
+                                    dropdownA.href = dropdownItem.href;
+                                    dropdownA.textContent = dropdownItem.name;
+                                    dropdownLi.appendChild(dropdownA);
+                                    ul.appendChild(dropdownLi);
+                                });
+                                li.appendChild(a);
+                                li.appendChild(ul);
+                            } else {
+                                const a = document.createElement('a');
+                                a.className = 'nav-link';
+                                a.href = item.href;
+                                a.textContent = item.name;
+                                li.appendChild(a);
+                            }
+                            navbarNav.appendChild(li);
+                        });
+                    });
+                </script>
+</body>
+
+</html>

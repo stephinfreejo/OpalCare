@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpalWellness</title>
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="chatbot.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMW5vW1foP7Uq+TL0DoPI8P+ylf9fC0P1zQ==" crossorigin="anonymous">
+    <script src="chatbot.js" defer></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><b>OpalWellness</b></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                    <!-- Dynamic content will be added here by JavaScript -->
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+   <!-- Main Content -->
+  <div class="container mt-5">
+    <h1 class="text-center text-primary">Chronic Respiratory Diseases</h1>
+
+    <div class="mt-4">
+      <h2>Overview</h2>
+      <p>Chronic respiratory diseases (CRDs) affect the airways and other structures of the lungs. Some of the most common are chronic obstructive pulmonary disease (COPD), asthma, occupational lung diseases and pulmonary hypertension. In addition to tobacco smoke, other risk factors include air pollution, occupational chemicals and dusts, and frequent lower respiratory infections during childhood. CRDs are not curable; however, various forms of treatment that help open the air passages and improve shortness of breath can help control symptoms and improve daily life for people living with these conditions. The WHO Global Alliance against CRDs (GARD) vision is “a world in which all people breathe freely”. GARD focuses on the needs of people with CRDs in low- and middle-income countries.</p>
+      <p>The aim of the WHO Chronic Respiratory Diseases Programme is to support Member States in their efforts to reduce the toll of morbidity, disability and premature mortality related to chronic respiratory diseases, specifically asthma and chronic obstructive pulmonary disease.</p>
+    </div>
+
+    <div class="mt-4">
+      <h2>Symptoms</h2>
+      <p>The two most common chronic respiratory diseases are asthma and chronic obstructive pulmonary disease (COPD). These both affect the airways in the lungs.</p>
+      <p>Asthma is characterized by recurrent attacks of breathlessness and wheezing due to airway narrowing, which vary in severity and frequency from person to person. Symptoms may occur several times in a day or week in affected individuals, and for some people become worse during physical activity or at night. Asthma is the most common chronic disease among children.</p>
+      <p>In asthma, the airway obstruction is reversible with inhaled medicines, but in COPD it is mostly fixed. COPD only affects adults and usually becomes worse with time. The most common symptoms of COPD are breathlessness or a need for air, sputum production and a chronic cough.</p>
+      <p>Risk factors for chronic respiratory diseases include tobacco smoking (including second-hand smoke), air pollution, allergens and occupational risks. Outdoor air pollution and indoor air pollution (often caused by cooking with solid fuels) are also common causes.</p>
+      <p>Asthma and COPD may be prevented by reducing or avoiding exposure to these risk factors.</p>
+    </div>
+
+    <div class="mt-4">
+      <h2>Treatments</h2>
+      <p>Neither asthma nor chronic obstructive pulmonary disease (COPD) can be cured but treatment can reduce symptoms, prevent deterioration and improve daily life.</p>
+      <p>During attacks of breathlessness caused by airway narrowing, inhaled medicines (bronchodilators) can open the airways and relieve symptoms. If untreated, severe attacks can lead to death.</p>
+      <p>Appropriate management of asthma with inhaled corticosteroid medicine can control the progression of the disease and reduce deaths. Long-term treatment is required for people with persistent symptoms and exposures which trigger symptoms (e.g. smoke, fumes, dust, grass and tree pollen, animal fur and feathers) should be avoided.</p>
+      <p>Chronic obstructive pulmonary disease is confirmed by a spirometry test, which measures how much and how quickly a person can blow air out of their lungs. Symptoms can be treated through medical and physical treatments; however, with COPD in people who smoke tobacco, the most effective treatment available is to stop smoking. This can slow down the progression of the disease and decrease COPD-related deaths. In specific cases, people may benefit from using inhaled corticosteroid medicines.</p>
+    </div>
+  </div>
+    <div id="bot-icon">
+        <img src="chatbot.jpg" alt="bot Icon">
+    </div>
+    <div id="chat-container" class="minimized">
+        <div class="chat-container">
+            <div class="chat-header">Chatbot</div>
+            <div class="chat-subheader">Ask me anything?</div>
+            <div class="chat-body" id="chat-body">
+                <!-- Predefined questions section -->
+                <div class="predefined-questions">
+                    <ul id="question-list">
+                        <li data-answer="A balanced diet includes a variety of foods in the right proportions to provide the necessary nutrients for good health. It typically includes fruits, vegetables, lean proteins, whole grains, and healthy fats.">What is a balanced diet?</li>
+                        <li data-answer="It is generally recommended to drink about 8 cups (2 liters) of water a day. However, this can vary based on individual needs, activity levels, and climate.">How much water should I drink daily?</li>
+                        <li data-answer="Healthy snacks include fruits, vegetables with hummus, nuts, yogurt, and whole-grain crackers.">What are some healthy snacks?</li>
+                        <li data-answer="The best way to lose weight is through a combination of a healthy, balanced diet and regular physical activity. It's also important to consult with a healthcare provider before starting any weight loss plan.">What is the best way to lose weight?</li>
+                    </ul>
+                </div>
+                <!-- Dynamic conversation section -->
+                <div id="answer"></div>
+            </div>
+            <div class="chat-footer">
+                <input type="text" id="user-question" placeholder="Type your question...">
+                <button id="send-btn">Send</button>
+                <i class="fas fa-sync-alt" id="refresh-btn"></i> <!-- Refresh icon -->
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const navItems = [
+                { name: 'Home', href: 'index.html' },
+                { name: 'Plans for you', href: 'plans.html' },
+                { name: 'More', href: 'areawise.html' },
+                { name: 'About us', href: 'about.html' },
+            ];
+
+            const navbarNav = document.querySelector('.navbar-nav');
+            navItems.forEach(item => {
+                const li = document.createElement('li');
+                li.className = 'nav-item';
+                if (item.name === 'More') {
+                    // Create a dropdown menu
+                    li.className = 'nav-item dropdown';
+                    const a = document.createElement('a');
+                    a.className = 'nav-link dropdown-toggle';
+                    a.href = '#';
+                    a.role = 'button';
+                    a.dataset.bsToggle = 'dropdown';
+                    a.ariaExpanded = 'false';
+                    a.textContent = item.name;
+                    const ul = document.createElement('ul');
+                    ul.className = 'dropdown-menu';
+                    const dropdownItems = [
+                        { name: 'Hospitals', href: 'areawise.html' },
+                        { name: 'Latest Studies and News', href: 'home.html' },
+                        { name: 'Lifestyle Diseases', href: 'life.html' },
+                        { name: 'Vaccinations info', href: 'vacc.html' },
+                        { name: 'Contact us', href: 'contact.html' }
+                    ];
+                    dropdownItems.forEach(dropdownItem => {
+                        const dropdownLi = document.createElement('li');
+                        const dropdownA = document.createElement('a');
+                        dropdownA.className = 'dropdown-item';
+                        dropdownA.href = dropdownItem.href;
+                        dropdownA.textContent = dropdownItem.name;
+                        dropdownLi.appendChild(dropdownA);
+                        ul.appendChild(dropdownLi);
+                    });
+                    li.appendChild(a);
+                    li.appendChild(ul);
+                } else {
+                    const a = document.createElement('a');
+                    a.className = 'nav-link';
+                    a.href = item.href;
+                    a.textContent = item.name;
+                    li.appendChild(a);
+                }
+                navbarNav.appendChild(li);
+            });
+        });
+    </script>
+</body>
+
+</html>

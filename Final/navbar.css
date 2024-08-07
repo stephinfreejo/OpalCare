@@ -1,0 +1,51 @@
+.navbar-custom {
+    background: linear-gradient(90deg, #A8E6CF, #56B281); /* Gradient from light green to darker green */
+    color: #333333; /* Darker text color for better readability */
+    padding: 10px; /* Add padding to make the navbar appear filled */
+    border-bottom: 2px solid #333333; /* Add a bottom border for a filled look */
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link,
+.navbar-custom .navbar-toggler-icon {
+    color: #333333; /* Darker text color */
+}
+
+.navbar-custom .navbar-brand:hover,
+.navbar-custom .nav-link:hover {
+    color: #000000; /* Black color on hover for stronger contrast */
+}
+
+.navbar-custom .dropdown-menu {
+    background-color: #56B281; /* Darker green for dropdown menu */
+}
+
+.navbar-custom .dropdown-item {
+    color: #ffffff; /* White color for dropdown items */
+}
+
+.navbar-custom .dropdown-item:hover {
+    background-color: #A8E6CF; /* Lighter green on hover for dropdown items */
+}
+
+.navbar-custom .btn-outline-success {
+    color: #333333; /* Button text color */
+    border-color: #333333; /* Button border color */
+}
+
+.navbar-custom .btn-outline-success:hover {
+    color: #56B281; /* Button text color on hover */
+    background-color: #ffffff; /* Button background color on hover */
+    border-color: #333333; /* Button border color on hover */
+}
+body {
+    margin: 0;
+    padding: 0;
+    padding-top: 56px; /* Adjust this value if necessary to avoid content being hidden under the fixed navbar */
+}
+.navbar-custom {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1030; /* Ensure it's above other content */
+}

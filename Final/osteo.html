@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpalWellness</title>
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="chatbot.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMW5vW1foP7Uq+TL0DoPI8P+ylf9fC0P1zQ==" crossorigin="anonymous">
+    <script src="chatbot.js" defer></script>
+    <style>
+        .heading {
+            text-align: center;
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><b>OpalWellness</b></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                    <!-- Dynamic content will be added here by JavaScript -->
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Heading -->
+  <div class="container mt-5">
+    <h1 class="text-center text-primary">Osteoporosis</h1>
+  </div>
+
+  <!-- Content Section -->
+  <div class="container mt-4">
+    <!-- Overview -->
+    <section id="overview">
+      <h2>Overview</h2>
+      <p>Osteoporosis is a condition characterized by weakened bones that are more prone to fracture. It is particularly common in postmenopausal women due to the decrease in estrogen levels, which affects bone density.</p>
+      <p>An expert technical assessment of the many factors that influence the risk of osteoporotic fracture in postmenopausal women and thus need to be considered when planning the most effective public health interventions. In view of growing awareness of the need to prevent and treat postmenopausal osteoporosis, the book aims to resolve several controversies concerning the usefulness of screening programmes, the appropriate target populations, the most effective methods for predicting fracture risk, techniques for assessment, and the comparative effectiveness of currently available preventive and therapeutic interventions. More than 450 references to the literature are included.</p>
+    </section>
+
+    <!-- Epidemiology -->
+    <section id="epidemiology">
+      <h2>Epidemiology</h2>
+      <p>The report opens with a detailed review of what is known about osteoporosis, the criteria for establishing diagnosis, the value of bone mineral density measurements as diagnostic and prognostic tools, factors that influence the morbidity and mortality caused by fractures at different sites, and the physiological determinants of bone loss and fracture risk. A review of the epidemiology of osteoporotic fractures is used to determine the size of the public health problem, to identify appropriate target populations for screening, and to define intervention thresholds.</p>
+    </section>
+
+    <!-- Assessment Methods -->
+    <section id="assessment-methods">
+      <h2>Assessment Methods</h2>
+      <p>A large part of the report is devoted to a review of the advantages and limitations of three candidate methods for predicting future fracture risk: assessment of bone mass, assessment of bone loss, and clinical assessment of risk factors. Information on non-invasive physical techniques for bone mass assessment is especially detailed. Currently available techniques are described and discussed in terms of their performance characteristics, safety, accuracy, and suitability for use as screening tools.</p>
+    </section>
+
+    <!-- Risk Factors -->
+    <section id="risk-factors">
+      <h2>Risk Factors</h2>
+      <p>The report also evaluates various biochemical and other methods for the assessment of bone loss, lists the currently known risk factors and protective factors, and considers whether these factors can be used to identify high-risk individuals.</p>
+      <p>Non-modifiable risk factors include:</p>
+      <ul>
+        <li>Age</li>
+        <li>Gender (women are at higher risk)</li>
+        <li>Family history</li>
+        <li>Previous fractures</li>
+      </ul>
+      <p>Modifiable risk factors include:</p>
+      <ul>
+        <li>Low calcium and vitamin D intake</li>
+        <li>Lack of physical activity</li>
+        <li>Smoking</li>
+        <li>Excessive alcohol consumption</li>
+      </ul>
+    </section>
+
+    <!-- Interventions -->
+    <section id="interventions">
+      <h2>Interventions</h2>
+      <p>A section devoted to the risks and benefits of intervention evaluates the efficacy and safety of hormone replacement therapy, using estrogens alone or estrogens combined with progestogens, and other currently available interventions, including the use of calcium, calcitonins, and bisphosphonates. Particular attention is given to the assessment of evidence that estrogen replacement therapy might increase the risk of certain cancers and decrease the risk of morbidity and mortality from cardiovascular disease.</p>
+    </section>
+
+    <!-- Screening -->
+    <section id="screening">
+      <h2>Screening</h2>
+      <p>The final section, on screening, reaches a number of important conclusions concerning the value, aims, target population, assessment methods, interventions, and organization of screening programmes for postmenopausal osteoporosis. These conclusions form the basis for several practical and technical recommendations useful to public health authorities as well as to clinicians seeking guidance on safe and effective ways to prevent osteoporotic fractures.</p>
+    </section>
+  </div>
+
+    <div id="bot-icon">
+        <img src="chatbot.jpg" alt="bot Icon">
+    </div>
+    <div id="chat-container" class="minimized">
+        <div class="chat-container">
+            <div class="chat-header">Chatbot</div>
+            <div class="chat-subheader">Ask me anything?</div>
+            <div class="chat-body" id="chat-body">
+                <!-- Predefined questions section -->
+                <div class="predefined-questions">
+                    <ul id="question-list">
+                        <li data-answer="A balanced diet includes a variety of foods in the right proportions to provide the necessary nutrients for good health. It typically includes fruits, vegetables, lean proteins, whole grains, and healthy fats.">What is a balanced diet?</li>
+                        <li data-answer="It is generally recommended to drink about 8 cups (2 liters) of water a day. However, this can vary based on individual needs, activity levels, and climate.">How much water should I drink daily?</li>
+                        <li data-answer="Healthy snacks include fruits, vegetables with hummus, nuts, yogurt, and whole-grain crackers.">What are some healthy snacks?</li>
+                        <li data-answer="The best way to lose weight is through a combination of a healthy, balanced diet and regular physical activity. It's also important to consult with a healthcare provider before starting any weight loss plan.">What is the best way to lose weight?</li>
+                    </ul>
+                </div>
+                <!-- Dynamic conversation section -->
+                <div id="answer"></div>
+            </div>
+            <div class="chat-footer">
+                <input type="text" id="user-question" placeholder="Type your question...">
+                <button id="send-btn">Send</button>
+                <i class="fas fa-sync-alt" id="refresh-btn"></i> <!-- Refresh icon -->
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const navItems = [
+                { name: 'Home', href: 'index.html' },
+                { name: 'Plans for you', href: 'plans.html' },
+                { name: 'More', href: 'areawise.html' },
+                { name: 'About us', href: 'about.html' },
+            ];
+
+            const navbarNav = document.querySelector('.navbar-nav');
+            navItems.forEach(item => {
+                const li = document.createElement('li');
+                li.className = 'nav-item';
+                if (item.name === 'More') {
+                    // Create a dropdown menu
+                    li.className = 'nav-item dropdown';
+                    const a = document.createElement('a');
+                    a.className = 'nav-link dropdown-toggle';
+                    a.href = '#';
+                    a.role = 'button';
+                    a.dataset.bsToggle = 'dropdown';
+                    a.ariaExpanded = 'false';
+                    a.textContent = item.name;
+                    const ul = document.createElement('ul');
+                    ul.className = 'dropdown-menu';
+                    const dropdownItems = [
+                        { name: 'Hospitals', href: 'areawise.html' },
+                        { name: 'Latest Studies and News', href: 'home.html' },
+                        { name: 'Lifestyle Diseases', href: 'life.html' },
+                        { name: 'Vaccinations info', href: 'vacc.html' },
+                        { name: 'Contact us', href: 'contact.html' }
+                    ];
+                    dropdownItems.forEach(dropdownItem => {
+                        const dropdownLi = document.createElement('li');
+                        const dropdownA = document.createElement('a');
+                        dropdownA.className = 'dropdown-item';
+                        dropdownA.href = dropdownItem.href;
+                        dropdownA.textContent = dropdownItem.name;
+                        dropdownLi.appendChild(dropdownA);
+                        ul.appendChild(dropdownLi);
+                    });
+                    li.appendChild(a);
+                    li.appendChild(ul);
+                } else {
+                    const a = document.createElement('a');
+                    a.className = 'nav-link';
+                    a.href = item.href;
+                    a.textContent = item.name;
+                    li.appendChild(a);
+                }
+                navbarNav.appendChild(li);
+            });
+        });
+    </script>
+</body>
+
+</html>

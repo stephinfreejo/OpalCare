@@ -1,0 +1,104 @@
+h1{
+    font-weight: bolder;
+}
+h2{
+    font-weight: bolder;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.overview {
+    padding: 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    margin: 20px;
+    border-radius: 8px;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+.card {
+    width: 300px;
+    margin: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.global-initiatives,
+.videos,
+.resources {
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.global-initiatives h2,
+.videos h2,
+.resources h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.initiative {
+    margin-bottom: 15px;
+}
+
+.statistics {
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.impact-card {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    padding: 20px;
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+}
+
+.impact-card h5 {
+    margin-bottom: 15px;
+}
+
+.impact-card ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.impact-card ul li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+}

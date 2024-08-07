@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpalWellness</title>
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="chatbot.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMW5vW1foP7Uq+TL0DoPI8P+ylf9fC0P1zQ==" crossorigin="anonymous">
+    <script src="chatbot.js" defer></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><b>OpalWellness</b></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                    <!-- Dynamic content will be added here by JavaScript -->
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+     <!-- Heading -->
+  <div class="container mt-5">
+    <h1 class="text-center text-primary">Obesity</h1>
+  </div>
+
+  <!-- Content Section -->
+  <div class="container mt-4">
+    <!-- Overview -->
+    <section id="overview">
+      <h2>Overview</h2>
+      <p>Overweight and obesity are defined as abnormal or excessive fat accumulation that presents a risk to health. A body mass index (BMI) over 25 is considered overweight, and over 30 is obese. In 2019, an estimated 5 million noncommunicable disease (NCD) deaths were caused by higher-than-optimal BMI.</p>
+      <p>Rates of overweight and obesity continue to grow in adults and children. From 1990 to 2022, the percentage of children and adolescents aged 5–19 years living with obesity increased four-fold from 2% to 8% globally, while the percentage of adults 18 years of age and older living with obesity more than doubled from 7% to 16%.</p>
+      <p>Obesity is one side of the double burden of malnutrition, and today more people are obese than underweight in every region except the South-East Asia Region. Once considered a problem only in high-income countries, today some middle-income countries have among the highest prevalence of overweight and obesity worldwide.</p>
+    </section>
+
+    <!-- Complications -->
+    <section id="complications">
+      <h2>Complications</h2>
+      <p>Overweight and obesity are major risk factors for a number of chronic diseases, including cardiovascular diseases such as heart disease and stroke, which are the leading causes of death worldwide. Being overweight can also lead to diabetes and its associated conditions, including blindness, limb amputations, and the need for dialysis. Rates of diabetes have quadrupled since around the world since 1980.</p>
+      <p>Carrying excess weight can lead to musculoskeletal disorders including osteoarthritis. Obesity is also associated with some cancers, including endometrial, breast, ovarian, prostate, liver, gallbladder, kidney and colon. The risk of these noncommunicable diseases increases even when a person is only slightly overweight and grows more serious as the body mass index (BMI) climbs.</p>
+      <p>Obesity in childhood is associated with a wide range of serious health complications and an increased risk of premature onset of related illnesses. Studies have found that without intervention, children and adolescents with obesity will likely continue to be obese into adulthood.</p>
+    </section>
+
+    <!-- Prevention and Control -->
+    <section id="prevention-control">
+      <h2>Prevention and Control</h2>
+      <p>Many of the causes of overweight and obesity are preventable and reversible. Although other factors are involved, the fundamental cause of obesity is an imbalance of calories consumed and calories expended. As global diets have changed in recent decades, there has been an increase in the consumption of energy-dense foods high in fat and free sugars. There has also been a decrease in physical activity due to the changing nature of many types of work, more access to transportation and increased urbanization.</p>
+      <p>Lowering the risk of overweight and obesity includes reducing the number of calories consumed from fats and sugars, increasing the portion of daily intake of fruit, vegetables, legumes, whole grains and nuts, and engaging in regular physical activity (60 minutes per day for children and 150 minutes per week for adults). In babies, studies have shown that exclusive breastfeeding from birth to 6 months of age reduces the risk of infants becoming overweight or obese.</p>
+    </section>
+  </div>
+    <div id="bot-icon">
+        <img src="chatbot.jpg" alt="bot Icon">
+    </div>
+    <div id="chat-container" class="minimized">
+        <div class="chat-container">
+            <div class="chat-header">Chatbot</div>
+            <div class="chat-subheader">Ask me anything?</div>
+            <div class="chat-body" id="chat-body">
+                <!-- Predefined questions section -->
+                <div class="predefined-questions">
+                    <ul id="question-list">
+                        <li data-answer="A balanced diet includes a variety of foods in the right proportions to provide the necessary nutrients for good health. It typically includes fruits, vegetables, lean proteins, whole grains, and healthy fats.">What is a balanced diet?</li>
+                        <li data-answer="It is generally recommended to drink about 8 cups (2 liters) of water a day. However, this can vary based on individual needs, activity levels, and climate.">How much water should I drink daily?</li>
+                        <li data-answer="Healthy snacks include fruits, vegetables with hummus, nuts, yogurt, and whole-grain crackers.">What are some healthy snacks?</li>
+                        <li data-answer="The best way to lose weight is through a combination of a healthy, balanced diet and regular physical activity. It's also important to consult with a healthcare provider before starting any weight loss plan.">What is the best way to lose weight?</li>
+                    </ul>
+                </div>
+                <!-- Dynamic conversation section -->
+                <div id="answer"></div>
+            </div>
+            <div class="chat-footer">
+                <input type="text" id="user-question" placeholder="Type your question...">
+                <button id="send-btn">Send</button>
+                <i class="fas fa-sync-alt" id="refresh-btn"></i> <!-- Refresh icon -->
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const navItems = [
+                { name: 'Home', href: 'index.html' },
+                { name: 'Plans for you', href: 'plans.html' },
+                { name: 'More', href: 'areawise.html' },
+                { name: 'About us', href: 'about.html' },
+            ];
+
+            const navbarNav = document.querySelector('.navbar-nav');
+            navItems.forEach(item => {
+                const li = document.createElement('li');
+                li.className = 'nav-item';
+                if (item.name === 'More') {
+                    // Create a dropdown menu
+                    li.className = 'nav-item dropdown';
+                    const a = document.createElement('a');
+                    a.className = 'nav-link dropdown-toggle';
+                    a.href = '#';
+                    a.role = 'button';
+                    a.dataset.bsToggle = 'dropdown';
+                    a.ariaExpanded = 'false';
+                    a.textContent = item.name;
+                    const ul = document.createElement('ul');
+                    ul.className = 'dropdown-menu';
+                    const dropdownItems = [
+                        { name: 'Hospitals', href: 'areawise.html' },
+                        { name: 'Latest Studies and News', href: 'home.html' },
+                        { name: 'Lifestyle Diseases', href: 'life.html' },
+                        { name: 'Vaccinations info', href: 'vacc.html' },
+                        { name: 'Contact us', href: 'contact.html' }
+                    ];
+                    dropdownItems.forEach(dropdownItem => {
+                        const dropdownLi = document.createElement('li');
+                        const dropdownA = document.createElement('a');
+                        dropdownA.className = 'dropdown-item';
+                        dropdownA.href = dropdownItem.href;
+                        dropdownA.textContent = dropdownItem.name;
+                        dropdownLi.appendChild(dropdownA);
+                        ul.appendChild(dropdownLi);
+                    });
+                    li.appendChild(a);
+                    li.appendChild(ul);
+                } else {
+                    const a = document.createElement('a');
+                    a.className = 'nav-link';
+                    a.href = item.href;
+                    a.textContent = item.name;
+                    li.appendChild(a);
+                }
+                navbarNav.appendChild(li);
+            });
+        });
+    </script>
+</body>
+
+</html>

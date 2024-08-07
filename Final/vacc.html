@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaccination Information</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="navbar.css">
+    <script src="navbar.js"></script>
+    <link rel="stylesheet" href="chatbot.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><b>OpalWellness</b></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                    <!-- Dynamic content will be added here by JavaScript -->
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div id="bot-icon">
+        <img src="chatbot.jpg" alt="bot Icon">
+    </div>
+    <div id="chat-container" class="minimized">
+        <div class="chat-container">
+            <div class="chat-header">Chatbot</div>
+            <div class="chat-subheader">Ask me anything?</div>
+            <div class="chat-body" id="chat-body">
+                <!-- Predefined questions section -->
+                <div class="predefined-questions">
+                    <ul id="question-list">
+                        <li data-answer="A balanced diet includes a variety of foods in the right proportions to provide the necessary nutrients for good health. It typically includes fruits, vegetables, lean proteins, whole grains, and healthy fats.">What is a balanced diet?</li>
+                        <li data-answer="It is generally recommended to drink about 8 cups (2 liters) of water a day. However, this can vary based on individual needs, activity levels, and climate.">How much water should I drink daily?</li>
+                        <li data-answer="Healthy snacks include fruits, vegetables with hummus, nuts, yogurt, and whole-grain crackers.">What are some healthy snacks?</li>
+                        <li data-answer="The best way to lose weight is through a combination of a healthy, balanced diet and regular physical activity. It's also important to consult with a healthcare provider before starting any weight loss plan.">What is the best way to lose weight?</li>
+                    </ul>
+                </div>
+                <!-- Dynamic conversation section -->
+                <div id="answer"></div>
+            </div>
+            <div class="chat-footer">
+                <input type="text" id="user-question" placeholder="Type your question...">
+                <button id="send-btn">Send</button>
+                <i class="fas fa-sync-alt" id="refresh-btn"></i> <!-- Refresh icon -->
+            </div>
+        </div>
+    </div>
+<script src="chatbot.js"></script>
+
+
+    <div class="overview">
+        <h2 style="text-align: center;">Vaccination</h2>
+        <p>
+            Vaccination is a crucial public health tool used to prevent the spread of infectious diseases. Vaccines work
+            by stimulating the body's immune system to recognize and fight pathogens such as bacteria and viruses. They
+            are one of the most effective means of preventing diseases and have been responsible for reducing the
+            prevalence of many life-threatening illnesses. It has helped eradicate diseases like smallpox and has significantly reduced the incidence of others like polio and measles. Preventing diseases through vaccination reduces healthcare costs and prevents loss of productivity due to illness.
+        </p>
+    </div>
+
+    <div class="card-container">
+        <div class="card">
+            <img src="vaccination_images/child.jpg" class="card-img-top" alt="Childhood Vaccines">
+            <div class="card-body">
+                <h5 class="card-title">Childhood Vaccines</h5>
+                <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">View Details</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="vaccination_images/adult.jpg" class="card-img-top" alt="Adolescent and Adult Vaccines">
+            <div class="card-body">
+                <h5 class="card-title">Adolescent and Adult Vaccines</h5>
+                <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">View Details</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="vaccination_images/vaccine.jpg" class="card-img-top" alt="Other Vaccines">
+            <div class="card-body">
+                <h5 class="card-title">Additional Vaccines</h5>
+                <!-- Fix: Correct the data-bs-target to match the actual offcanvas ID -->
+                <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLeft" aria-controls="offcanvasLeft">View Details</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Offcanvas components -->
+    <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <h3 class="offcanvas-title" id="offcanvasRightLabel">Childhood Vaccines</h3>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul>
+                <li>
+                    <h5>BCG (Bacillus Calmette-Guérin) Vaccine</h5>
+                    <p>Purpose: Protects against tuberculosis (TB).</p>
+                    <p>Schedule: Given at birth or as soon as possible until 1 year of age.</p>
+                </li>
+                <li>
+                    <h5>Oral Polio Vaccine (OPV)</h5>
+                    <p>Purpose: Protects against poliomyelitis (polio).</p>
+                    <p>Schedule: At birth, 6 weeks, 10 weeks, 14 weeks, and booster doses during national polio campaigns.</p>
+                </li>
+                <li>
+                    <h5>Hepatitis B Vaccine</h5>
+                    <p>Purpose: Protects against hepatitis B virus infection.</p>
+                    <p>Schedule: At birth (within 24 hours), 6 weeks, 10 weeks, and 14 weeks.</p>
+                </li>
+                <li>
+                  <h5>Pentavalent Vaccine (DPT + Hepatitis B + Hib)</h5>
+                  <p>Purpose: Protects against diphtheria, pertussis (whooping cough), tetanus, hepatitis B,
+                      and
+                      Haemophilus influenzae type b infections.</p>
+                  <p>Schedule: 6 weeks, 10 weeks, and 14 weeks.</p>
+              </li>
+              <li>
+                  <h3>Rotavirus Vaccine</h3>
+                  <p>Purpose: Protects against rotavirus infections, which cause severe diarrhea in infants and
+                      young children.</p>
+                  <p>Schedule: 6 weeks, 10 weeks, and 14 weeks.</p>
+              </li>
+              <li>
+                  <h5>Pneumococcal Conjugate Vaccine (PCV)</h5>
+                  <p>Purpose: Protects against pneumococcal infections, including pneumonia and meningitis.</p>
+                  <p>Schedule: 6 weeks, 10 weeks, and 9 months.</p>
+              </li>
+              <li>
+                  <h5>Measles and Rubella (MR) Vaccine</h5>
+                  <p>Purpose: Protects against measles and rubella.</p>
+                  <p>Schedule: 9 months and 15 months.</p>
+              </li>
+              <li>
+                  <h5>Japanese Encephalitis (JE) Vaccine (in endemic districts)</h5>
+                  <p>Purpose: Protects against Japanese encephalitis.</p>
+                  <p>Schedule: 9 months and 16-24 months.</p>
+              </li>
+              <li>
+                  <h5>DPT Booster</h5>
+                  <p>Purpose: Boosts protection against diphtheria, pertussis, and tetanus.</p>
+                  <p>Schedule: 16-24 months and 5-6 years.</p>
+              </li>
+              <li>
+                  <h5>OPV Booster</h5>
+                  <p>Purpose: Boosts protection against poliomyelitis.</p>
+                  <p>Schedule: 16-24 months.</p>
+              </li>
+              <li>
+                  <h5>Vitamin A Supplementation</h5>
+                  <p>Purpose: Prevents vitamin A deficiency, which can lead to blindness and increased
+                      mortality
+                      among children.</p>
+                  <p>Schedule: First dose at 9 months, followed by a dose every 6 months up to 5 years.</p>
+              </li>  
+
+            </ul>
+        </div>
+    </div>
+
+    <div class="offcanvas offcanvas-left" data-bs-scroll="true" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+        <div class="offcanvas-header">
+            <h3 class="offcanvas-title" id="offcanvasBottomLabel">Adolescent and Adult Vaccines</h3>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul>
+               
+                <li>
+                  <h5>Tetanus and Adult Diphtheria (Td) Vaccine</h5>
+                  <p>Purpose: Protects against tetanus and diphtheria.</p>
+                  <p>Schedule: Given at 10 years and 16 years of age. Also recommended for pregnant women
+                      during
+                      each pregnancy.</p>
+              </li>
+
+            </ul>
+        </div>
+    </div>
+
+    <div class="offcanvas offcanvas-left" data-bs-scroll="true" tabindex="-1" id="offcanvasLeft" aria-labelledby="offcanvasLeftLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasLeftLabel">Additional Vaccines</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul>
+                <li>
+                    <h5>Human Papillomavirus (HPV) Vaccine</h5>
+                    <p>Purpose: Protects against cervical cancer.</p>
+                </li>
+                <li>
+                  <h5>Influenza Vaccine</h5>
+                  <p>Purpose: Protects against seasonal flu.</p>
+              </li>
+              <li>
+                  <h5>Typhoid Vaccine</h5>
+                  <p>Purpose: Protects against typhoid fever.</p>
+              </li>
+              <li>
+                  <h5>Varicella (Chickenpox) Vaccine</h5>
+                  <p>Purpose: Protects against chickenpox.</p>
+              </li>
+              <li>
+                  <h5>Meningococcal Vaccine</h5>
+                  <p>Purpose: Protects against meningococcal disease.</p>
+              </li>
+
+            </ul>
+        </div>
+    </div>
+
+<div style="width: auto;
+padding: 20px;
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: rgb(196, 196, 196);">
+    <div class="impact-statistics">
+        <h2>Vaccine Impact Statistics</h2>
+        <div class="impact-card card">
+            <img src="vaccination_images/graph.jpg" class="card-img-top" alt="Vaccine Impact Statistics">
+            <div class="card-body">
+                <h5 class="card-title">Key Statistics</h5>
+                <p>
+                    The given chart above shows the
+            significant impact of vaccines in terms of diseases eradicated, lives saved annually, cases prevented
+            annually, and global vaccine coverage.
+                </p>
+                
+                <a href="graph.html" class="btn btn-primary">View Graph</a>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="global-initiatives">
+        <h2>Global Vaccination Initiatives</h2>
+
+        <div class="initiative">
+            <h3>GAVI, The Vaccine Alliance</h3>
+            <p>GAVI works to improve access to vaccines for children in the world's poorest countries.</p>
+            <a href="https://www.gavi.org">https://www.gavi.org</a>
+        </div>
+        <div class="initiative">
+            <h3>WHO's Expanded Programme on Immunization (EPI)</h3>
+            <p>The EPI aims to ensure that all children have access to lifesaving vaccines.</p>
+            <a href="https://www.who.int">https://www.who.int</a>
+        </div>
+        <!-- Add more initiatives -->
+    </div>
+
+    <div class="videos">
+        <h2>Informative Videos</h2>
+        <div class="video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/vPCnNQckOsE?si=3OjqvEVTlsGpXCXE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/6DRPGrwIRaQ?si=r50gRxVXvQXeqf9K" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            
+
+  
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

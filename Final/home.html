@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health related articles</title>
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="chatbot.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMW5vW1foP7Uq+TL0DoPI8P+ylf9fC0P1zQ==" crossorigin="anonymous">
+    <script src="chatbot.js"></script>
+    <link rel="stylesheet" href="navbar.css">
+    <style>
+       
+        .card-img-top {
+            height: 200px;
+            /* Fixed height for all card images */
+            object-fit: cover;
+            /* Crop images to cover the fixed height */
+        }
+
+        .card {
+            margin-bottom: 20px;
+            height: 450px;
+            /* Space between rows of cards */
+        }
+
+        .container {
+            padding-top: 20px;
+            /* Add padding to the top of the container */
+        }
+
+        .card {
+            position: relative;
+            margin-bottom: 20px;
+            height: 450px;
+            /* Space between rows of cards */
+        }
+
+        .card-body {
+            padding-bottom: 50px;
+            /* Add space at the bottom for the button */
+        }
+
+        .card .btn-primary {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            padding-bottom: 10px;
+        }
+
+        .card-title {
+            text-align: center;
+            font-weight: bold;
+            text-transform: capitalize;
+            font-size: 1.5rem; /* Increase font size */
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><b>OpalWellness</b></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                    <!-- Dynamic content will be added here by JavaScript -->
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Include contents of webpage -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 article-card">
+                <div class="card">
+                    <img src="pictures_for_study_articles/Mental_health.png" class="card-img-top" alt="Article Image">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Mental Health</h5>
+                        <p class="card-text">Explore the latest strategies for managing mental health conditions, reducing stress and anxiety, and promoting overall well-being. Learn about the impact of lifestyle factors on mental health and the importance of mental health in various aspects of life.</p>
+                        <a href="Mental_health.html" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 article-card">
+                <div class="card">
+                    <img src="pictures_for_study_articles/Fitness_and_exercise.png" class="card-img-top" alt="Article Image">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Fitness and Exercise</h5>
+                        <p class="card-text">Stay updated on new workout trends, effective exercise routines, and the benefits of physical activity. Discover tips for maintaining an active lifestyle, improving fitness levels, and integrating exercise into daily life.</p>
+                        <a href="Fitness_and_exercise.html" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 article-card">
+                <div class="card">
+                    <img src="pictures_for_study_articles/Healthy_Life.png" class="card-img-top" alt="Article Image">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Healthy Lifestyle</h5>
+                        <p class="card-text">Find advice on achieving a balanced and healthy lifestyle through proper nutrition, regular physical activity, adequate sleep, and stress management. Learn about the long-term benefits of making healthy choices and tips for sustainable living.</p>
+                        <a href="Healthy_lifestyle.html" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4 article-card">
+                <div class="card">
+                    <img src="pictures_for_study_articles/Womens_health.png" class="card-img-top" alt="Article Image">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Women's Health</h5>
+                        <p class="card-text">Get insights into the latest research and recommendations for women's health, including reproductive health and disease preventions. Understand the unique health challenges women face and how to address them effectively.</p>
+                        <a href="Womens_health.html" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 article-card">
+                <div class="card">
+                    <img src="pictures_for_study_articles/Child_and_adolescent_health.png" class="card-img-top" alt="Article Image">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Child and Adolescent Health</h5>
+                        <p class="card-text">Explore key topics related to the health and development of children and adolescents, such as nutrition, vaccinations, mental health, and physical activity. Find resources for supporting healthy growth and well-being during these critical stages of life.</p>
+                        <a href="Child_and_adolescent_health.html" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 article-card">
+                <div class="card">
+                    <img src="pictures_for_study_articles/Elderly_health.png" class="card-img-top" alt="Article Image">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Elderly Health</h5>
+                        <p class="card-text">Learn about the specific health concerns of older adults, including managing chronic conditions, promoting healthy aging, and maintaining cognitive and physical health. Discover tips for enhancing quality of life and independence in later years.</p>
+                        <a href="Elderly_health.html" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4 article-card">
+                <div class="card">
+                    <img src="pictures_for_study_articles/Healthcare_technology.png" class="card-img-top" alt="Article Image">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Healthcare Technology</h5>
+                        <p class="card-text">Stay informed about the latest innovations in healthcare technology, such as telemedicine, health apps, and wearable devices. Understand how these advancements transform patient care and make healthcare more accessible.</p>
+                        <a href="Healthcare_technology.html" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 article-card">
+                <div class="card">
+                    <img src="pictures_for_study_articles/Env_health.png" class="card-img-top" alt="Article Image">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Environmental Health</h5>
+                        <p class="card-text">Understand the impact of environmental factors on health, including pollution, climate change, and exposure to toxins. Learn about strategies for reducing environmental health risks and promoting a healthier, more sustainable environment.</p>
+                        <a href="Environmental_health.html" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 article-card">
+                <div class="card">
+                    <img src="pictures_for_study_articles/Immunology_and_vaccines.png" class="card-img-top" alt="Article Image">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Immunology and Vaccines</h5>
+                        <p class="card-text">Explore advancements in immunology and vaccine research, the role of the immune system in health, and the importance of vaccinations in preventing diseases. Get updates on new vaccines, their effectiveness, and public health implications.</p>
+                        <a href="Immunology_and_vaccines.html" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    
+    <div id="bot-icon">
+      <img src="pictures_for_study_articles/chatbot.png" alt="bot Icon">
+  </div>
+  <div id="chat-container" class="minimized">
+      <div class="chat-container">
+          <div class="chat-header">Chatbot</div>
+          <div class="chat-subheader">Ask me anything?</div>
+          <div class="chat-body" id="chat-body">
+              <!-- Predefined questions section -->
+              <div class="predefined-questions">
+                  <ul id="question-list">
+                      <li data-answer="A balanced diet includes a variety of foods in the right proportions to provide the necessary nutrients for good health. It typically includes fruits, vegetables, lean proteins, whole grains, and healthy fats.">What is a balanced diet?</li>
+                      <li data-answer="It is generally recommended to drink about 8 cups (2 liters) of water a day. However, this can vary based on individual needs, activity levels, and climate.">How much water should I drink daily?</li>
+                      <li data-answer="Healthy snacks include fruits, vegetables with hummus, nuts, yogurt, and whole-grain crackers.">What are some healthy snacks?</li>
+                      <li data-answer="The best way to lose weight is through a combination of a healthy, balanced diet and regular physical activity. It's also important to consult with a healthcare provider before starting any weight loss plan.">What is the best way to lose weight?</li>
+                  </ul>
+              </div>
+              <!-- Dynamic conversation section -->
+              <div id="answer"></div>
+          </div>
+          <div class="chat-footer">
+              <input type="text" id="user-question" placeholder="Type your question...">
+              <button id="send-btn">Send</button>
+              <i class="fas fa-sync-alt" id="refresh-btn"></i> <!-- Refresh icon -->
+          </div>
+      </div>
+  </div>
+
+
+
+    <script src="/js/bootstrap.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+
+      
+    <script src="navbar.js"></script>
+
+
+</body>
+
+</html>

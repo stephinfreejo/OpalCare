@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpalWellness</title>
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="chatbot.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMW5vW1foP7Uq+TL0DoPI8P+ylf9fC0P1zQ==" crossorigin="anonymous">
+    <script src="chatbot.js" defer></script>
+</head>
+    <style>
+        /* Center align h1 */
+        .heading {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        /* Make all cards the same size */
+        .card {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .card-body {
+            flex: 1;
+        }
+
+        .card-img-top {
+            object-fit: cover;
+            height: 200px;
+        }
+
+        /* Make sure the card body has equal height */
+        .card {
+            height: 100%;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><b>OpalWellness</b></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                    <!-- Dynamic content will be added here by JavaScript -->
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Heading -->
+    <div class="container">
+        <h1 class="heading">Lifestyle Diseases</h1>
+    </div>
+
+    <!-- Card Container -->
+    <div class="container">
+        <div class="row">
+            <!-- Card 1 -->
+            <div class="col-md-4 mb-3">
+                <div class="card" style="width: 100%;">
+                    <img src="/pictures/istockphoto-1128931450-612x612.jpg" class="card-img-top" alt="Heart Disease">
+                    <div class="card-body">
+                        <h5 class="card-title">Cardiovascular Disease</h5>
+                        <p class="card-text">Commonly linked to poor diet, lack of exercise, smoking, and excessive alcohol consumption. Preventive measures include a balanced diet, regular physical activity, avoiding tobacco, and managing stress effectively.</p>
+                        <a href="/heartdiesease.html" class="btn btn-primary">More</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="col-md-4 mb-3">
+                <div class="card" style="width: 100%;">
+                    <img src="/pictures/stroke.jpg" class="card-img-top" alt="Stroke">
+                    <div class="card-body">
+                        <h5 class="card-title">Stroke</h5>
+                        <p class="card-text">Often caused by high blood pressure, smoking, obesity, and physical inactivity. Reducing salt intake, quitting smoking, maintaining a healthy weight, and regular exercise are essential for prevention and reducing risk.</p>
+                        <a href="/stroke.html" class="btn btn-primary">More</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="col-md-4 mb-3">
+                <div class="card" style="width: 100%;">
+                    <img src="/pictures/BloodGlucoseImage2Feb231200x800.avif" class="card-img-top" alt="Diabetes">
+                    <div class="card-body">
+                        <h5 class="card-title">Diabetes</h5>
+                        <p class="card-text">Associated with obesity, poor diet, and inactivity. Prevention includes maintaining a healthy weight, eating a balanced diet, regular physical activity, and monitoring blood sugar levels to manage risk effectively.</p>
+                        <a href="/Diabetes.html" class="btn btn-primary">More</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="col-md-4 mb-3">
+                <div class="card" style="width: 100%;">
+                    <img src="/pictures/photo-1532094349884-543bc11b234d.jpg" class="card-img-top" alt="Chronic Respiratory Diseases">
+                    <div class="card-body">
+                        <h5 class="card-title">Chronic Respiratory Diseases</h5>
+                        <p class="card-text">Includes COPD and asthma, often exacerbated by smoking, air pollution, and occupational hazards. Quitting smoking, avoiding pollutants, and using protective gear can help prevent these conditions.</p>
+                        <a href="/chronic.html" class="btn btn-primary">More</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 5 -->
+            <div class="col-md-4 mb-3">
+                <div class="card" style="width: 100%;">
+                    <img src="/pictures/cancer.jpg" class="card-img-top" alt="Cancer">
+                    <div class="card-body">
+                        <h5 class="card-title">Cancer</h5>
+                        <p class="card-text">Various types influenced by smoking, poor diet, excessive alcohol consumption, and lack of exercise. Prevention includes avoiding tobacco, eating a healthy diet, limiting alcohol, and regular screenings for early detection.</p>
+                        <a href="/cancer.html" class="btn btn-primary">More</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 6 -->
+            <div class="col-md-4 mb-3">
+                <div class="card" style="width: 100%;">
+                    <img src="/pictures/ObesityAllyouNeedToKnowAboutIt1705476487.webp" class="card-img-top" alt="Obesity">
+                    <div class="card-body">
+                        <h5 class="card-title">Obesity</h5>
+                        <p class="card-text">Linked to poor diet and lack of physical activity. Maintaining a balanced diet, regular exercise, and a healthy lifestyle can help prevent obesity and related health problems.</p>
+                        <a href="/obesity.html" class="btn btn-primary">More</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 7 -->
+            <div class="col-md-4 mb-3">
+                <div class="card" style="width: 100%;">
+                    <img src="/pictures/images.png" class="card-img-top" alt="Hypertension (High Blood Pressure)">
+                    <div class="card-body">
+                        <h5 class="card-title">Hypertension (High Blood Pressure)</h5>
+                        <p class="card-text">Often related to high salt intake, lack of exercise, stress, and poor diet. Managing stress, reducing salt intake, regular physical activity, and a healthy diet are key preventive measures.</p>
+                        <a href="/hyper.html" class="btn btn-primary">More</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 8 -->
+            <div class="col-md-4 mb-3">
+                <div class="card" style="width: 100%;">
+                    <img src="/pictures/liver.jpg" class="card-img-top" alt="Liver Disease">
+                    <div class="card-body">
+                        <h5 class="card-title">Liver Disease</h5>
+                        <p class="card-text">Conditions like cirrhosis and liver cancer are influenced by excessive alcohol consumption, poor diet, and viral infections. Preventive measures include limiting alcohol, healthy diet, and vaccination against hepatitis.</p>
+                        <a href="/liver.html" class="btn btn-primary">More</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 9 -->
+            <div class="col-md-4 mb-3">
+                <div class="card" style="width: 100%;">
+                    <img src="/pictures/osteoporosis-41878270.png" class="card-img-top" alt="Osteoporosis">
+                    <div class="card-body">
+                        <h5 class="card-title">Osteoporosis</h5>
+                        <p class="card-text">Linked to poor diet (low calcium and vitamin D), lack of exercise, smoking, and excessive alcohol. Prevention includes a diet rich in calcium and vitamin D, regular weight-bearing exercise, and avoiding smoking.</p>
+                        <a href="/osteo.html" class="btn btn-primary">More</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 10 -->
+            <div class="col-md-4 mb-3">
+                <div class="card" style="width: 100%;">
+                    <img src="/pictures/mental.jpg" class="card-img-top" alt="Mental Health Disorders">
+                    <div class="card-body">
+                        <h5 class="card-title">Mental Health Disorders</h5>
+                        <p class="card-text">Conditions such as depression and anxiety are influenced by stress, lack of sleep, poor diet, and inactivity. Preventive measures include managing stress, regular physical activity, healthy diet, and adequate sleep.</p>
+                        <a href="/mental.html" class="btn btn-primary">More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="bot-icon">
+        <img src="chatbot.jpg" alt="bot Icon">
+    </div>
+    <div id="chat-container" class="minimized">
+        <div class="chat-container">
+            <div class="chat-header">Chatbot</div>
+            <div class="chat-subheader">Ask me anything?</div>
+            <div class="chat-body" id="chat-body">
+                <!-- Predefined questions section -->
+                <div class="predefined-questions">
+                    <ul id="question-list">
+                        <li data-answer="A balanced diet includes a variety of foods in the right proportions to provide the necessary nutrients for good health. It typically includes fruits, vegetables, lean proteins, whole grains, and healthy fats.">What is a balanced diet?</li>
+                        <li data-answer="It is generally recommended to drink about 8 cups (2 liters) of water a day. However, this can vary based on individual needs, activity levels, and climate.">How much water should I drink daily?</li>
+                        <li data-answer="Healthy snacks include fruits, vegetables with hummus, nuts, yogurt, and whole-grain crackers.">What are some healthy snacks?</li>
+                        <li data-answer="The best way to lose weight is through a combination of a healthy, balanced diet and regular physical activity. It's also important to consult with a healthcare provider before starting any weight loss plan.">What is the best way to lose weight?</li>
+                    </ul>
+                </div>
+                <!-- Dynamic conversation section -->
+                <div id="answer"></div>
+            </div>
+            <div class="chat-footer">
+                <input type="text" id="user-question" placeholder="Type your question...">
+                <button id="send-btn">Send</button>
+                <i class="fas fa-sync-alt" id="refresh-btn"></i> <!-- Refresh icon -->
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const navItems = [
+                { name: 'Home', href: 'index.html' },
+                { name: 'Plans for you', href: 'plans.html' },
+                { name: 'More', href: 'areawise.html' },
+                { name: 'About us', href: 'about.html' },
+            ];
+
+            const navbarNav = document.querySelector('.navbar-nav');
+            navItems.forEach(item => {
+                const li = document.createElement('li');
+                li.className = 'nav-item';
+                if (item.name === 'More') {
+                    // Create a dropdown menu
+                    li.className = 'nav-item dropdown';
+                    const a = document.createElement('a');
+                    a.className = 'nav-link dropdown-toggle';
+                    a.href = '#';
+                    a.role = 'button';
+                    a.dataset.bsToggle = 'dropdown';
+                    a.ariaExpanded = 'false';
+                    a.textContent = item.name;
+                    const ul = document.createElement('ul');
+                    ul.className = 'dropdown-menu';
+                    const dropdownItems = [
+                        { name: 'Hospitals', href: 'areawise.html' },
+                        { name: 'Latest Studies and News', href: 'home.html' },
+                        { name: 'Lifestyle Diseases', href: 'life.html' },
+                        { name: 'Vaccinations info', href: 'vacc.html' },
+                        { name: 'Contact us', href: 'contact.html' }
+                    ];
+                    dropdownItems.forEach(dropdownItem => {
+                        const dropdownLi = document.createElement('li');
+                        const dropdownA = document.createElement('a');
+                        dropdownA.className = 'dropdown-item';
+                        dropdownA.href = dropdownItem.href;
+                        dropdownA.textContent = dropdownItem.name;
+                        dropdownLi.appendChild(dropdownA);
+                        ul.appendChild(dropdownLi);
+                    });
+                    li.appendChild(a);
+                    li.appendChild(ul);
+                } else {
+                    const a = document.createElement('a');
+                    a.className = 'nav-link';
+                    a.href = item.href;
+                    a.textContent = item.name;
+                    li.appendChild(a);
+                }
+                navbarNav.appendChild(li);
+            });
+        });
+    </script>
+</body>
+
+</html>
